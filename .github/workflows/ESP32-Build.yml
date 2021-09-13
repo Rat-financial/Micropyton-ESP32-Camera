@@ -9,8 +9,9 @@ jobs:
         run: |
              ls
               chmod +x install.sh
+              chmod +x idf.py
+              chmod +x export.sh
              ./install.sh
-             chmod +x export.sh
              . ./export.sh
              cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32
              make
