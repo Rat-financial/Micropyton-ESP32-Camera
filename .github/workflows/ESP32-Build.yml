@@ -8,9 +8,7 @@ jobs:
       - working-directory: /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf
         run: |
              ls
-              chmod +x install.sh
-              chmod +x idf.py
-              chmod +x export.sh
+              chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera
              ./install.sh
              . ./export.sh
              cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32
