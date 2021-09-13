@@ -9,8 +9,8 @@ jobs:
         run: |
              git clone -b v1.17 --recursive https://github.com/micropython/micropython.git
              chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera
-             rm /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports/esp32 -r
-             cp /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32 /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports
+             rm -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports/esp32
+             cp -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32 /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports
              ls
              ./install.sh
              . ./export.sh
