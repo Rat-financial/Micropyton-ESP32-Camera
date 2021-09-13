@@ -7,11 +7,14 @@ jobs:
       - uses: actions/checkout@v2
       - working-directory: /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf
         run: |
+             git -b v1.17 clone --recursive https://github.com/micropython/micropython.git
+             chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera
+             rm /home/runner/work/Micropyton-ESP32-Camera/micropython/ports/esp32 -r
+             cp /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32 /home/runner/work/Micropyton-ESP32-Camera/micropython/ports/
              ls
-              chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera
              ./install.sh
              . ./export.sh
-             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32
+             cd /home/runner/work/Micropyton-ESP32-Camera/micropython/ports/esp32
              make
       - uses: actions/upload-artifact@v2
         with:
