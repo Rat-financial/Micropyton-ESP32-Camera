@@ -11,6 +11,9 @@ jobs:
              chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera
              rm -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports/esp32
              cp -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32 /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports
+             git clone -b v4.3.1 --recursive https://github.com/espressif/esp-idf.git
+             cp -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/components/esp32-camera /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/esp-idf/components/
+             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/esp-idf
              ls
              ./install.sh
              . ./export.sh
