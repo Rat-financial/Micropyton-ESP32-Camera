@@ -10,6 +10,7 @@ jobs:
              ls
               chmod +x install.sh
              ./install.sh
+             chmod +x export.sh
              . ./export.sh
              cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32
              make
