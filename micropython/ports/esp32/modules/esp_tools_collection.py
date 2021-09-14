@@ -706,5 +706,4 @@ class RTC_time():
         #print('GMT 時間(年,月,日,時,分,秒,星期,今年第幾天):', time.gmtime())      # 從time函數讀取 gmt時間(等同localtime)
         #print('模組時間(年,月,日,時,分,秒,星期,今年第幾天):', time.localtime())   # 從time函數讀取模組時間localtime(等同gmtime，均只能讀)
         print('')
-        return 1                                                                   # 回傳值 1 代表查詢網路時間成功
-
+        return 1 
