@@ -1,4 +1,0 @@
-source "/home/musnli/下載/Micropyton-ESP32-Camera/esp-idf/components/app_update/Kconfig.projbuild"
-source "/home/musnli/下載/Micropyton-ESP32-Camera/esp-idf/components/bootloader/Kconfig.projbuild"
-source "/home/musnli/下載/Micropyton-ESP32-Camera/esp-idf/components/esptool_py/Kconfig.projbuild"
-source "/home/musnli/下載/Micropyton-ESP32-Camera/esp-idf/components/partition_table/Kconfig.projbuild"
