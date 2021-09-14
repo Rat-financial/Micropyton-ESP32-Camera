@@ -5,23 +5,15 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - working-directory: /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf
+      - working-directory: /home/runner/work/Micropyton-ESP32-Camera/esp-idf
         run: |
-             git clone -b v1.17 --recursive https://github.com/micropython/micropython.git
              chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera
-             rm -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports/esp32
-             cp -r /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32 /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports
-             git clone -b v4.3.1 --recursive https://github.com/espressif/esp-idf.git
-             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/esp-idf/components
-             git clone --recursive https://github.com/espressif/esp32-camera.git
-             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/esp-idf
-             ls
              ./install.sh
              . ./export.sh
-             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports/esp32
+             cd /home/runner/work/Micropyton-ESP32-Camera/micropython/ports/esp32
              make
       - uses: actions/upload-artifact@v2
         with:
           name: firmware
           path: |
-                /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf/micropython/ports/esp32/build-GENERIC_CAM/firmware.bin
+                /home/runner/work/Micropyton-ESP32-Camera/micropython/ports/esp32/build-GENERIC_CAM/firmware.bin
