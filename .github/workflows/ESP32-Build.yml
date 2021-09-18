@@ -5,15 +5,15 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - working-directory: /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf
+      - working-directory: /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/esp-idf-v4.3.1
         run: |
              chmod -R 777 /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera
              ./install.sh
              . ./export.sh
-             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32
+             cd /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython-v1.17/ports/esp32
              make
       - uses: actions/upload-artifact@v2
         with:
           name: firmware
           path: |
-                /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython/ports/esp32/build-GENERIC_CAM/firmware.bin
+                /home/runner/work/Micropyton-ESP32-Camera/Micropyton-ESP32-Camera/micropython-v1.17/ports/esp32/build-GENERIC_CAM/firmware.bin
